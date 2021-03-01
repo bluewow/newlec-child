@@ -31,7 +31,12 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testCompile('io.rest-assured:rest-assured')
+    // view 페이지를 위한 타임리프 추가
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version: '2.4.3'
+    // 쿼리 확인을 위한 p6spy 추가
+    implementation 'com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.5.6'
 }
+
 
 test {
     useJUnitPlatform()
